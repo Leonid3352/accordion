@@ -1,3 +1,4 @@
+
 document.querySelectorAll('.accordion').forEach((el) => {
     el.addEventListener('click', () => {
        let content = el.nextElementSibling;
@@ -10,3 +11,9 @@ document.querySelectorAll('.accordion').forEach((el) => {
         }   
     })
 })
+document.querySelector(".arrow").addEventListener("click", function(e) {
+    document.querySelector(".arrow").classList.toggle("active");
+  });
+  document.querySelector(".accordion").addEventListener("click", function(e) {
+    document.querySelector(".arrow").classList.toggle("active");
+  });
