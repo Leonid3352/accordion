@@ -1,7 +1,10 @@
 .accordion {
+    text-align: center;
     border: 2px dashed #ccc;
     padding: 20px;
     background-color: #8e9a06;
+    cursor: pointer;
+    user-select: none
 }
 .content {
     transition: 0.3s ease-in-out;
@@ -10,3 +13,10 @@
     background-color: #586003;
     font-family: Arial, Helvetica, sans-serif;
 }
+.active {
+    color:red;
+    transform:rotate(180deg);
+  }
+  .arrow {
+    display:inline-block;
+  }
