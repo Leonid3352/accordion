@@ -1,22 +1,92 @@
-.accordion {
-    text-align: center;
-    border: 2px dashed #ccc;
+.btn {
+    border-radius: 50px;
+    background-color: rgba(3, 66, 40, 0.349);
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 99999;
+    right: -400px;
+    top: 24%;
+    transform: translateY(-50%);
+    width: 600px;
+    height: 50%;
+    overflow: auto;
+    background-color: #fff;
+    transition: right 0.5s ease-out;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.modal-content {
+    background-color: #cfb6b6;
+    margin: 15% auto;
     padding: 20px;
-    background-color: #8e9a06;
+    height: 100px;
+    border: 5px solid #8e0b0b;
+    border-radius: 100px;
+}
+
+.close {
+    color: black;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
     cursor: pointer;
-    user-select: none
 }
-.content {
-    transition: 0.3s ease-in-out;
-    max-height: 0;
-    overflow: hidden;
-    background-color: #586003;
-    font-family: Arial, Helvetica, sans-serif;
+@keyframes slideIn {
+    0% {
+      right: -400px;
+    }
+    100% {
+      right: 0;
+    }
+  }
+  
+  @keyframes slideOut {
+    0% {
+      right: 0;
+    }
+    100% {
+      right: -800px;
+    }
+  }
+
+  @media screen and (max-width: 1200px) {
+    
+  }
+
+  @media screen and (max-width: 998px) {
+    .modal {
+      width: 500px;
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    .modal {
+      width: 400px;
+    }
+  }
+
+  @media screen and (max-width: 576px) {
+    .modal {
+      width: 300px;
+    }
+  }
+
+  @media screen and (max-width: 400px) {
+    .modal {
+      width: 200px;
+    }
+    .modal-content {
+      height: 70px;
+    }
+  }
+@media screen and (max-width: 320px){
+  .modal {
+    width: 180px;
+  }
+  .modal-content {
+    height: 60px;
+  }
 }
-.active {
-    color:red;
-    transform:rotate(180deg);
-  }
-  .arrow {
-    display:inline-block;
-  }
